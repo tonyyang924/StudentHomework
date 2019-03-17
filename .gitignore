@@ -7,4 +7,6 @@
 *.iml
 app/student_homework_debug
 app/student_homework_release
+app/src/debug/google-services.json
+app/src/release/google-services.json
 keystore.properties

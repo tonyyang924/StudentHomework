@@ -1,56 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/id_et"
-        android:layout_width="match_parent"
+    <include
+        android:id="@+id/google_login"
+        layout="@layout/fui_idp_button_google"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/subTitle"
-        android:layout_alignBottom="@+id/subTitle"
-        android:layout_toRightOf="@+id/subTitle" >
-    </EditText>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/id_et"
-        android:layout_marginTop="26dp"
-        android:text="密碼"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
-        android:id="@+id/pw_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView01"
-        android:layout_alignBottom="@+id/TextView01"
-        android:layout_alignLeft="@+id/id_et"
-        android:layout_alignParentRight="true"
-        android:password="true">
-    </EditText>
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/pw_et"
-        android:layout_marginTop="28dp"
-        android:text="登入" />
-
-    <TextView
-        android:id="@+id/subTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="24dp"
-        android:text="帳號"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
